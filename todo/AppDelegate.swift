@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import Firebase
+import FBSDKCoreKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +20,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        var infoPlist: NSDictionary?
+        if let path = NSBundle.mainBundle().pathForResource("GoogleService-Info", ofType: "plist"){
+            infoPlist = NSDictionary(contentsOfFile: path)
+            GMSServices.provideAPIKey(infoPlist?.valueForKey("API_KEY") as! String)
+        }
+        
+        application.statusBarStyle = .LightContent
+        FIRApp.configure()
+        FIRDatabase.database().persistenceEnabled = true
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        //try! FIRAuth.auth()?.signOut()
+        
+        
+        if let _ = FIRAuth.auth()?.currentUser {
+            TaskManager.sharedInstance().syncWithFirebase()
+            let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("nav")
+            window?.makeKeyAndVisible()
+        } else {
+            TaskManager.sharedInstance().syncWithSQLite()
+        }
+        
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Sound, .Alert, .Badge], categories: nil))
+    
+        
         return true
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -36,6 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(application: UIApplication) {
