@@ -19,7 +19,6 @@
 		CD5795551D3A748D00824325 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5795541D3A748D00824325 /* SignupViewController.swift */; };
 		CD5795571D3A749F00824325 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5795561D3A749F00824325 /* ResetPasswordViewController.swift */; };
 		CD5795591D3A74B400824325 /* TodoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5795581D3A74B400824325 /* TodoDetailViewController.swift */; };
-		CD57955B1D3A74C400824325 /* TodoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD57955A1D3A74C400824325 /* TodoListTableViewController.swift */; };
 		CD5795631D3A949D00824325 /* ButtonWithBorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5795611D3A949D00824325 /* ButtonWithBorderRadius.swift */; };
 		CD5795641D3A949D00824325 /* ImageViewWithBorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5795621D3A949D00824325 /* ImageViewWithBorderRadius.swift */; };
 		CD5795661D3A94D100824325 /* TextFieldWithBorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5795651D3A94D100824325 /* TextFieldWithBorderRadius.swift */; };
@@ -29,6 +28,7 @@
 		CD7EFEC01D3ADCB500101309 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7EFEBF1D3ADCB500101309 /* ProfileViewController.swift */; };
 		CD7EFEC21D3ADF9F00101309 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7EFEC11D3ADF9F00101309 /* Todo.swift */; };
 		CD7EFEC41D3AFD8300101309 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7EFEC31D3AFD8300101309 /* TaskCell.swift */; };
+		CDB10FF41D40009700FB9979 /* TodoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB10FF31D40009700FB9979 /* TodoListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,6 @@
 		CD5795541D3A748D00824325 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignupViewController.swift; path = ViewControllers/SignupViewController.swift; sourceTree = "<group>"; };
 		CD5795561D3A749F00824325 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResetPasswordViewController.swift; path = ViewControllers/ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		CD5795581D3A74B400824325 /* TodoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoDetailViewController.swift; path = ViewControllers/TodoDetailViewController.swift; sourceTree = "<group>"; };
-		CD57955A1D3A74C400824325 /* TodoListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListTableViewController.swift; sourceTree = "<group>"; };
 		CD5795611D3A949D00824325 /* ButtonWithBorderRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonWithBorderRadius.swift; path = Models/ButtonWithBorderRadius.swift; sourceTree = "<group>"; };
 		CD5795621D3A949D00824325 /* ImageViewWithBorderRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageViewWithBorderRadius.swift; path = Models/ImageViewWithBorderRadius.swift; sourceTree = "<group>"; };
 		CD5795651D3A94D100824325 /* TextFieldWithBorderRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldWithBorderRadius.swift; path = Models/TextFieldWithBorderRadius.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		CD7EFEBF1D3ADCB500101309 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ViewControllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		CD7EFEC11D3ADF9F00101309 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Todo.swift; path = Models/Todo.swift; sourceTree = "<group>"; };
 		CD7EFEC31D3AFD8300101309 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		CDB10FF31D40009700FB9979 /* TodoListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoListTableViewController.swift; path = ViewControllers/TodoListTableViewController.swift; sourceTree = "<group>"; };
 		FE596251919A148D3B9C5D35 /* Pods_todo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_todo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,11 +137,11 @@
 		CD5795511D3A744D00824325 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CDB10FF31D40009700FB9979 /* TodoListTableViewController.swift */,
 				CD5795521D3A747800824325 /* LoginViewController.swift */,
 				CD5795541D3A748D00824325 /* SignupViewController.swift */,
 				CD5795561D3A749F00824325 /* ResetPasswordViewController.swift */,
 				CD5795581D3A74B400824325 /* TodoDetailViewController.swift */,
-				CD57955A1D3A74C400824325 /* TodoListTableViewController.swift */,
 				CD7EFEBF1D3ADCB500101309 /* ProfileViewController.swift */,
 			);
 			name = ViewControllers;
@@ -295,7 +295,6 @@
 				CD6C6F471D3FB00B0023D2E1 /* UIViewControllerExtensions.swift in Sources */,
 				CD5795531D3A747800824325 /* LoginViewController.swift in Sources */,
 				CD5795661D3A94D100824325 /* TextFieldWithBorderRadius.swift in Sources */,
-				CD57955B1D3A74C400824325 /* TodoListTableViewController.swift in Sources */,
 				CD57953A1D3A727500824325 /* AppDelegate.swift in Sources */,
 				CD7EFEC41D3AFD8300101309 /* TaskCell.swift in Sources */,
 				CD5795681D3AC04F00824325 /* NetworkingService.swift in Sources */,
@@ -309,6 +308,7 @@
 				CD2DF7171D3E806A007961DB /* TaskManager.swift in Sources */,
 				CD7EFEC21D3ADF9F00101309 /* Todo.swift in Sources */,
 				CD5795421D3A727500824325 /* todo.xcdatamodeld in Sources */,
+				CDB10FF41D40009700FB9979 /* TodoListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

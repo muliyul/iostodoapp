@@ -38,8 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
             window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("nav")
             window?.makeKeyAndVisible()
-        } else {
-            TaskManager.sharedInstance().syncWithSQLite()
         }
         
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Sound, .Alert, .Badge], categories: nil))

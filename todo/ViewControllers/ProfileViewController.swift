@@ -9,6 +9,8 @@
 import UIKit
 import FirebaseAuth
 import FirebaseStorage
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class ProfileViewController: UIViewController {
 
@@ -100,7 +102,10 @@ class ProfileViewController: UIViewController {
     
     @IBAction func logoutBtnTapped(sender: AnyObject) {
         try! FIRAuth.auth()?.signOut()
+        FBSDKLoginManager().logOut()
         let loginVC = storyboard!.instantiateViewControllerWithIdentifier("login")
-        presentViewController(loginVC, animated: true, completion: nil)
+        dismissViewControllerAnimated(true) { [weak self] in
+            self?.presentViewController(loginVC, animated: true, completion: nil)
+        }
     }
 }

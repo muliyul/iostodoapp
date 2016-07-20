@@ -12,7 +12,8 @@ import GoogleMaps
 import ReactiveKit
 import ReactiveUIKit
 
-class TodoDetailViewController: UITableViewController, CLLocationManagerDelegate, GMSAutocompleteViewControllerDelegate {
+class TodoDetailViewController: UITableViewController, UITextViewDelegate,
+                            CLLocationManagerDelegate, GMSAutocompleteViewControllerDelegate {
     @IBOutlet weak var pageTitleLbl: UINavigationItem!
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var descTF: UITextView!
@@ -49,6 +50,7 @@ class TodoDetailViewController: UITableViewController, CLLocationManagerDelegate
         }
         
         datePicker.minimumDate = NSDate()
+        descTF.delegate = self
         gmap.myLocationEnabled = true
         let lm = CLLocationManager()
         lm.delegate = self
@@ -68,6 +70,12 @@ class TodoDetailViewController: UITableViewController, CLLocationManagerDelegate
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         debugPrint(error.localizedDescription)
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        if todo?.desc == "" {
+            textView.text = ""
+        }
     }
     
     func viewController(viewController: GMSAutocompleteViewController, didAutocompleteWithPlace place: GMSPlace) {
