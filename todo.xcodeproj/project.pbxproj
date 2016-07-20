@@ -25,6 +25,7 @@
 		CD5795681D3AC04F00824325 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5795671D3AC04F00824325 /* NetworkingService.swift */; };
 		CD6C6F471D3FB00B0023D2E1 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C6F461D3FB00B0023D2E1 /* UIViewControllerExtensions.swift */; };
 		CD6C6F4B1D3FBBB40023D2E1 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C6F4A1D3FBBB40023D2E1 /* UIImageViewExtension.swift */; };
+		CD6C74121D40412200F09A7B /* paintsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD6C74111D40412200F09A7B /* paintsplash.jpg */; };
 		CD7EFEC01D3ADCB500101309 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7EFEBF1D3ADCB500101309 /* ProfileViewController.swift */; };
 		CD7EFEC21D3ADF9F00101309 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7EFEC11D3ADF9F00101309 /* Todo.swift */; };
 		CD7EFEC41D3AFD8300101309 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7EFEC31D3AFD8300101309 /* TaskCell.swift */; };
@@ -53,6 +54,7 @@
 		CD5795671D3AC04F00824325 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "\U0010NetworkingService.swift"; sourceTree = "<group>"; };
 		CD6C6F461D3FB00B0023D2E1 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		CD6C6F4A1D3FBBB40023D2E1 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		CD6C74111D40412200F09A7B /* paintsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paintsplash.jpg; sourceTree = "<group>"; };
 		CD7EFEBF1D3ADCB500101309 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ViewControllers/ProfileViewController.swift; sourceTree = "<group>"; };
 		CD7EFEC11D3ADF9F00101309 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Todo.swift; path = Models/Todo.swift; sourceTree = "<group>"; };
 		CD7EFEC31D3AFD8300101309 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		CD5795501D3A741500824325 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD6C74111D40412200F09A7B /* paintsplash.jpg */,
 				CD57954E1D3A734500824325 /* GoogleService-Info.plist */,
 				CD5795391D3A727500824325 /* AppDelegate.swift */,
 				CD57953D1D3A727500824325 /* Main.storyboard */,
@@ -232,6 +235,7 @@
 			files = (
 				CD5795471D3A727500824325 /* LaunchScreen.storyboard in Resources */,
 				CD57954F1D3A734500824325 /* GoogleService-Info.plist in Resources */,
+				CD6C74121D40412200F09A7B /* paintsplash.jpg in Resources */,
 				CD5795441D3A727500824325 /* Assets.xcassets in Resources */,
 				CD57953F1D3A727500824325 /* Main.storyboard in Resources */,
 			);
