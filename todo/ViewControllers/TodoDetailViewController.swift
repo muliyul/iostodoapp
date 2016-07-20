@@ -25,15 +25,18 @@ class TodoDetailViewController: UITableViewController, UITextViewDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        todo?.rName.map({ name in
-            if name == "" {
-                return "Add Task"
-            }
-            return name
-        }).bindTo(pageTitleLbl.rTitle)
         
         todo?.rName.bindTo(nameTF.rText)
         todo?.rDesc.bindTo(descTF.rText)
+        
+        nameTF.rText.map({ name in
+            guard name != nil && name != "" else {
+                return "My awesome task"
+            }
+            return name!
+        }).bindTo(pageTitleLbl.rTitle)
+        
+        
         
         todo?.rDate.map({ (timeStamp) -> NSDate in
             return NSDate(timeIntervalSince1970: timeStamp)

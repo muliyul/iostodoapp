@@ -556,7 +556,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ARs-oO-9aS">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="093-lP-yE9" kind="show" id="mi1-ON-IOa"/>
+                                <action selector="addTaskBtnTapped:" destination="QbN-gQ-8qO" id="5zS-9c-D4G"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -570,7 +570,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="edit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="093-lP-yE9" customClass="TodoDetailViewController" customModule="todo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="wiv-bt-4dc">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -637,15 +637,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="zjH-1L-zhV">
-                                                    <rect key="frame" x="140" y="28" width="320" height="216"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="272"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="490419780.50329602">
                                                         <!--2016-07-17 03:43:00 +0000-->
                                                     </date>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="zjH-1L-zhV" firstAttribute="width" secondItem="tN0-a3-HYj" secondAttribute="width" id="2P1-Wn-pKC"/>
                                                 <constraint firstItem="zjH-1L-zhV" firstAttribute="centerY" secondItem="tN0-a3-HYj" secondAttribute="centerY" id="Cur-2j-bDy"/>
                                                 <constraint firstItem="zjH-1L-zhV" firstAttribute="centerX" secondItem="tN0-a3-HYj" secondAttribute="centerX" id="il4-TB-XWV"/>
+                                                <constraint firstItem="zjH-1L-zhV" firstAttribute="height" secondItem="tN0-a3-HYj" secondAttribute="height" id="soE-nh-hdP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

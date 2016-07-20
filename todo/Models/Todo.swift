@@ -41,7 +41,7 @@ class Todo : NSObject{
     var fbRef: FIRDatabaseReference?
     var sqlId: Int64?
     var name: String
-    var desc: String
+    var desc = ""
     var date: Double
     var location: [Double] = []
     var done: Bool = false
@@ -69,10 +69,13 @@ class Todo : NSObject{
     var rLocation: CollectionProperty<Array<Double>> {
         return CollectionProperty(location)
     }
+    var rDone: Property<Bool> {
+        return Property(done)
+    }
 
     init(name: String, desc: String? = nil, date: Double, location: [Double]? = nil){
         self.name = name
-        self.desc = desc!
+        self.desc = desc ?? ""
         self.date = date
         guard let location = location else {
             return
